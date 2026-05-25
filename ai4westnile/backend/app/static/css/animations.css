@@ -1,0 +1,62 @@
+/* ================= GLOBAL TRANSITIONS ================= */
+
+.primary-btn,
+.secondary-btn,
+.donate-nav-btn,
+.sector-card,
+.event-card,
+.coordinator-card{
+    transition:0.4s ease;
+}
+
+/* ================= HOVER LIFT EFFECT ================= */
+
+.sector-card:hover,
+.event-card:hover,
+.coordinator-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(37,99,235,0.2);
+}
+
+/* ================= BUTTON ANIMATION ================= */
+
+.primary-btn{
+    box-shadow:0 0 20px rgba(22,163,74,0.5);
+}
+
+.primary-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= HERO FADE-IN ================= */
+
+.hero-content{
+    animation:fadeInUp 1.2s ease-in-out;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= SECTION REVEAL (AOS support enhancement) ================= */
+
+section{
+    transition:all 0.6s ease;
+}
+
+/* ================= IMAGE HOVER EFFECT ================= */
+
+.sector-card img{
+    transition:transform 0.5s ease;
+}
+
+.sector-card:hover img{
+    transform:scale(1.05);
+}

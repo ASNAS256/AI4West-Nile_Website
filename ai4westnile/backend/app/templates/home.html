@@ -1,0 +1,340 @@
+<!--backend/app/templates/home.html-->
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logos/logo.png') }}" alt="AI 4 West Nile Logo">
+        <span>AI 4 West Nile</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#coordinators">Community</a></li>
+        <li><a href="#footer">Contact</a></li>
+        <li>
+            <a href="{{ url_for('home.donate') }}"
+                class="donate-nav-btn">
+                    Donate
+            </a>
+        </li>
+    </ul>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+
+        <h1>
+            Empowering West Nile Through Artificial Intelligence
+        </h1>
+
+        <p>
+            A community-driven initiative introducing,
+            democratizing, and applying AI technologies
+            to solve real-world challenges across
+            Agriculture, Health, Education,
+            Trade, and Technology in West Nile, Uganda.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="primary-btn">
+                Join the Movement
+            </button>
+
+            <button class="secondary-btn">
+                Learn More
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about" data-aos="fade-up">
+    <div class="section-title">
+        <h2>About AI 4 West Nile</h2>
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            West Nile AI Drive (AI 4 West Nile)
+            is a regional innovation movement focused
+            on creating awareness, building AI skills,
+            and developing local AI-driven solutions
+            for communities across West Nile.
+        </p>
+
+        <p>
+            We believe Artificial Intelligence can help
+            improve healthcare delivery, agricultural productivity,
+            education systems, business growth,
+            and youth innovation opportunities.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= SECTORS ================= -->
+<section class="sectors" id="sectors" data-aos="fade-up">
+
+    <div class="section-title">
+        <h2>Focus Sectors</h2>
+    </div>
+
+    <div class="sector-cards">
+
+        <!-- AGRICULTURE -->
+        <div class="sector-card">
+
+            <img
+            src="{{ url_for('static',
+            filename='images/sectors/agriculture.jpg') }}"
+            alt="Agriculture">
+
+            <div class="sector-content">
+
+                <h3>Agriculture</h3>
+
+                <p>
+                    AI-powered farming insights,
+                    smart irrigation, disease detection,
+                    and agricultural data systems.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- HEALTH -->
+        <div class="sector-card">
+
+            <img
+            src="{{ url_for('static',
+            filename='images/sectors/health.jpg') }}"
+            alt="Health">
+
+            <div class="sector-content">
+
+                <h3>Health</h3>
+
+                <p>
+                    Digital health systems,
+                    maternal healthcare innovations,
+                    diagnostics, and health analytics.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="sector-card">
+
+            <img
+            src="{{ url_for('static',
+            filename='images/sectors/education.jpg') }}"
+            alt="Education">
+
+            <div class="sector-content">
+
+                <h3>Education</h3>
+
+                <p>
+                    AI learning platforms,
+                    digital literacy,
+                    and youth innovation programs.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- BUSINESS -->
+        <div class="sector-card">
+
+            <img
+            src="{{ url_for('static',
+            filename='images/sectors/business.jpg') }}"
+            alt="Trade & Business">
+
+            <div class="sector-content">
+
+                <h3>Trade & Business</h3>
+
+                <p>
+                    Business intelligence,
+                    digital entrepreneurship,
+                    and market access solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- INFORMATION TECHNOLOGY -->
+        <div class="sector-card">
+
+            <img
+            src="{{ url_for('static',
+            filename='images/sectors/it.jpg') }}"
+            alt="Information Technology">
+
+            <div class="sector-content">
+
+                <h3>Information Technology</h3>
+
+                <p>
+                    Software development,
+                    AI engineering,
+                    cybersecurity,
+                    cloud technologies,
+                    and digital innovation ecosystems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats" data-aos="zoom-in">
+    <div class="stat-box">
+       <h2 class="counter" data-target="10">0</h2>
+        <p>Districts Targeted</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="1000">0</h2>
+        <p>Youths to Empower</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="20">0</h2>
+        <p>Community Projects</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="5">0</h2>
+        <p>Key Sectors</p>
+    </div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+<section class="events" id="events" data-aos="fade-up">
+
+    <div class="section-title">
+        <h2>Upcoming Events</h2>
+    </div>
+
+    <div class="event-cards">
+
+        <div class="event-card">
+            <h3>AI Awareness Workshop</h3>
+            <p>Introduction to AI for students and youths.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Community Hackathon</h3>
+            <p>Developing AI solutions for local challenges.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Digital Skills Bootcamp</h3>
+            <p>Training young innovators in AI technologies.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COORDINATORS ================= -->
+<section class="coordinators" id="coordinators" data-aos="fade-up">
+
+    <div class="section-title">
+        <h2>Community Coordinators</h2>
+    </div>
+
+    <div class="coordinator-grid">
+
+        <div class="coordinator-card">
+
+            <h3>Regional Coordinators</h3>
+                <p>
+                    Leading AI awareness and
+                    innovation activities across West Nile.
+                </p>
+
+            <a href="https://forms.gle/9AtAQeFi4w9WkN9G9" target="_blank">
+                <button class="apply-btn">
+                    Apply as Coordinator
+                </button>
+
+            </a>
+
+        </div>
+
+        <div class="coordinator-card">
+            <h3>Youth Leaders</h3>
+            <p>
+                Mobilizing and mentoring
+                local youth innovators.
+            </p>
+        </div>
+
+        <div class="coordinator-card">
+            <h3>Community Volunteers</h3>
+            <p>
+                Supporting outreach,
+                training, and technology adoption.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="footer">
+    <h2>West Nile AI Drive (AI 4 West Nile)</h2>
+
+    <p>
+        Democratizing Artificial Intelligence
+        for Community Transformation.
+    </p>
+
+    <p>
+        © 2026 AI 4 West Nile. All Rights Reserved.
+    </p>
+
+</footer>
+
+{% endblock %}

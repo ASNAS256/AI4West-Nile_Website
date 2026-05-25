@@ -1,0 +1,160 @@
+<!---backend/app/templates/donate.html--->
+{% extends 'base.html' %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/donate.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<!-- ================= DONATION TOP BAR ================= -->
+
+<div class="donation-topbar">
+
+    <a href="{{ url_for('home.home') }}"
+    class="donation-logo-link">
+
+        <img
+        src="{{ url_for('static',
+        filename='images/logos/logo.png') }}"
+        alt="AI 4 West Nile Logo">
+
+        <span>AI 4 West Nile</span>
+
+    </a>
+
+</div>
+<!-- ================= DONATION HERO ================= -->
+
+<section class="donation-page">
+    <div class="donation-container">
+
+        <h1>
+            Support AI Innovation in West Nile
+        </h1>
+
+        <p>
+            Your support helps empower youth,
+            build AI skills,
+            support innovation projects,
+            organize community trainings,
+            and expand access to technology
+            across West Nile.
+        </p>
+
+        <div class="donation-buttons">
+
+            <button class="donate-btn">
+                Donate via Mobile Money
+            </button>
+
+            <button class="donate-btn secondary-donate">
+                Become a Partner
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= IMPACT ================= -->
+
+<section class="donation-impact">
+
+    <div class="section-title">
+        <h2>Your Contribution Makes Impact</h2>
+    </div>
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+
+            <h3>AI Trainings</h3>
+
+            <p>
+                Support AI workshops,
+                bootcamps,
+                and youth skill development.
+            </p>
+
+        </div>
+
+        <div class="impact-card">
+
+            <h3>Community Outreach</h3>
+
+            <p>
+                Help us reach schools,
+                institutions,
+                and rural communities.
+            </p>
+
+        </div>
+
+        <div class="impact-card">
+
+            <h3>Innovation Projects</h3>
+
+            <p>
+                Fund local AI-driven
+                solutions for regional challenges.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAYMENT INFO ================= -->
+
+<section class="payment-section">
+
+    <div class="section-title">
+        <h2>Donation Channels</h2>
+    </div>
+
+    <div class="payment-cards">
+
+        <div class="payment-card">
+
+            <h3>Mobile Money</h3>
+
+            <p>
+                MTN / Airtel Numbers
+                can be added here.
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <h3>Bank Transfer</h3>
+
+            <p>
+                Bank account details
+                can be added here.
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <h3>International Support</h3>
+
+            <p>
+                PayPal, Flutterwave,
+                or Stripe integration later.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

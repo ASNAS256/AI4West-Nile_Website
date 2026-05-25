@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>AI 4 West Nile</title>
+
+    <!-- WEBSITE LOGO / FAVICON -->
+    <link rel="icon"
+    type="image/png"
+    href="{{ url_for('static',
+    filename='images/logos/logo.png') }}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- PAGE CSS -->
+    {% block extra_css %}{% endblock %}
+
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <!-- ANIMATIONS CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MAIN JS -->
+    <script
+    src="{{ url_for('static', filename='js/main.js') }}">
+    </script>
+
+</body>
+</html>
